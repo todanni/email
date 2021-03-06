@@ -7,7 +7,7 @@ type Recipient struct {
 
 type Service interface {
 	// SendPasswordResetEmail -
-	SendPasswordResetEmail(recipient Recipient) error
+	SendPasswordResetEmail(code string, recipient Recipient) error
 
 	// SendVerificationEmail -
 	SendVerificationEmail(code string, recipient Recipient) error
